@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".mainActivities.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="64dp">
+
+        </com.google.android.gms.maps.MapView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:weightSum="3"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            >
+
+            <ImageButton
+                android:id="@+id/barra_ruta"
+                android:src="@drawable/ruta_activo"
+                android:layout_weight="1"
+                android:layout_width="0px"
+                android:onClick="onClick"
+                android:layout_height="64dp" />
+
+            <ImageButton
+                android:id="@+id/barra_alerta"
+                android:src="@drawable/alerta_activo"
+                android:layout_weight="1"
+                android:layout_width="0px"
+                android:onClick="alert"
+                android:layout_height="64dp" />
+
+            <ImageButton
+                android:id="@+id/barra_seguir"
+                android:src="@drawable/seguir_activo"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:layout_width="0px"
+                android:layout_height="64dp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/dialog"
+        android:visibility="gone"
+        android:background="@android:color/white"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="35dp">
+
+            <TextView
+                android:id="@+id/zonetype"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:background="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_marginBottom="25dp"
+                android:text="Alarma Activada"/>
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/zonetype"
+                android:layout_marginBottom="25dp"
+                android:src="@drawable/logo_wiu"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icon"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:onClick="cancelAlert"
+                android:text="Cancelar"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

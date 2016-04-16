@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_zonas"
+            android:icon="@drawable/location"
+            android:title="Zonas" />
+        <item
+            android:id="@+id/nav_routes"
+            android:icon="@drawable/road"
+            android:title="Recorridos" />
+        <item
+            android:id="@+id/nav_mates"
+            android:icon="@drawable/social"
+            android:title="Compañeros" />
+    </group>
+
+    <item android:title="Serious Stuff">
+        <menu>
+            <item
+                android:id="@+id/nav_config"
+                android:icon="@drawable/gear"
+                android:title="Configuración" />
+            <item
+                android:id="@+id/nav_stats"
+                android:icon="@drawable/arrow"
+                android:title="Estadísticas" />
+        </menu>
+    </item>
+
+</menu>
